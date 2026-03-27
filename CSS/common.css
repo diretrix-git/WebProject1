@@ -177,3 +177,40 @@ nav {
 .hamburger.open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
+/*================================
+  RESPONSIVE
+  NAV
+  ================================
+  */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 15, 26, 0.98);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open {
+    max-height: 300px;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+  .nav-links a {
+    display: block;
+    padding: 0.9rem 1.5rem;
+    border-bottom: none;
+  }
+}
