@@ -1,0 +1,65 @@
+/* ================================
+   CodeKraft — game.css
+   Reaction Time Test styles
+   ================================ */
+
+.game-hero {
+  text-align: center;
+  padding: 3rem 1.5rem 1rem;
+}
+.game-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+.game-hero p {
+  color: var(--muted);
+}
+
+.game-wrapper {
+  max-width: 500px;
+  margin: 2rem auto 5rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/* The big clickable box */
+.reaction-box {
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid var(--border);
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.reaction-box p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  pointer-events: none; /* clicks go to the box, not the text */
+}
+
+/* States */
+.reaction-box.waiting {
+  background: var(--bg-card);
+}
+.reaction-box.ready {
+  background: #c0392b;
+} /* red — wait */
+.reaction-box.go {
+  background: #27ae60;
+} /* green — click now! */
+
+/* Result text */
+.result-text {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  min-height: 1.5rem;
+}
